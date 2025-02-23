@@ -1,0 +1,87 @@
+<section class="vision-section">
+    <div class="vision-content">
+        <div class="vision-text">
+            <h2>{{ title | default("OUR VISION") }}</h2>
+            <p>{{ description | default("To be leading consulting partners for Small/Medium Growing Businesses driving their digital transformation") }}</p>
+        </div>
+        <div class="vision-image">
+            <img src="{{ img | default(" /assets/smbdigitalway/images/bro.png") }}" alt="Digital Transformation">
+        </div>
+    </div>
+</section>
+
+<style>
+    .vision-section {
+        margin-top: 100px;
+        padding: 40px;
+        overflow: hidden;
+        /* For containing animations */
+        position: relative;
+        /* For positioning pseudo-element */
+    }
+
+    .vision-content {
+        display: flex;
+        align-items: center;
+        /* Vertically center content */
+        max-width: 960px;
+        /* Adjust as needed */
+        margin: 0 auto;
+    }
+
+    .vision-text {
+        flex: 1;
+        /* Takes up available space */
+        padding-right: 20px;
+        opacity: 0;
+        /* Initially hidden */
+        transform: translateY(20px);
+        /* Initially slightly below */
+        animation: fadeInUp 1s ease-in-out forwards;
+        /* Animation trigger */
+    }
+
+    .vision-text h2 {
+        width: 262;
+        height: 52;
+        font-family: Be Vietnam;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -1%;
+        text-align: center;
+        color: #14487F;
+
+    }
+
+    .vision-text p {
+        font-family: Be Vietnam;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22.5px;
+        letter-spacing: 0.8px;
+        color: #374151;
+        width: 549.2999267578125;
+        height: 46;
+
+    }
+
+    .vision-image {
+        flex: 1;
+        text-align: center;
+        /* Center the image */
+        opacity: 0;
+        /* Initially hidden */
+        transform: translateX(20px);
+        /* Initially slightly to the right */
+        animation: fadeInRight 1s ease-in-out forwards;
+        /* Animation trigger */
+    }
+
+    .vision-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        /* Optional rounded corners */
+    }
+</style>

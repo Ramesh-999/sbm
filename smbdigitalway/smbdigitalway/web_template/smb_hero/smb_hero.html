@@ -1,0 +1,105 @@
+<section class="smb-hero-section">
+    <img src="/assets/smbdigitalway/images/image.png" alt="Img">
+    <div class="smb-hero-text">
+        <h2>{{ title | default("Empowering Careers in Digital Transformation.") }}</h2>
+        <p>{{ description | default("At SMB Digital Way, we believe in nurturing talent and empowering professionals to drive digital transformation for small and medium businesses. Join us to be part of a dynamic team that simplifies technology adoption, builds trust with clients, and delivers transparent and ethical solutions. We offer opportunities to grow, innovate, and make a real impact in the evolving digital landscape. Whether you are a technology expert, business strategist, or digital consultant, we provide a collaborative environment where your skills and ideas can thrive.") }}</p>
+    </div>
+</section>
+{% if btn_text %}
+<div class='hero-button'>
+    <a href="{{ btn_url | default('#') }}"> {{ btn_text }} </a>
+    <img src="/assets/smbdigitalway/images/Vector.png" alt="Icon">
+</div>
+{% else %}
+<div class='hero-button'>
+    <a href="{{ btn_url | default('#') }}"> LEARN HOW WE HELP </a>
+    <img src="/assets/smbdigitalway/images/Vector.png" alt="Icon">
+</div>
+{% endif %}
+<style>
+    .smb-hero-section {
+        display: flex;
+        max-width: 800px;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .smb-hero-text {
+        flex: 1;
+        /* Takes up available space */
+        padding-right: 20px;
+        opacity: 0;
+        /* Initially hidden */
+        transform: translateY(20px);
+        /* Initially slightly below */
+        animation: fadeInUp 1s ease-in-out forwards;
+        /* Animation trigger */
+    }
+
+    .smb-hero-text h2 {
+        width: 262;
+        height: 52;
+        font-family: Be Vietnam;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -1%;
+        text-align: center;
+        color: #14487F;
+
+    }
+
+    .smb-hero-text p {
+        font-family: Be Vietnam;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22.5px;
+        letter-spacing: 0.8px;
+        color: #374151;
+        width: 549.2999267578125;
+        height: 46;
+
+    }
+
+    .hero-button {
+        margin: auto;
+        max-width: 265px;
+        height: 56;
+        gap: 10px;
+        padding-top: 16px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        border-radius: 8px;
+        border-width: 1px;
+        background: #3EC1CE;
+        border: 1px solid #3EC1CE;
+        transition: background-color 0.3s ease;
+        /* Smooth hover transition */
+        animation: fadeInUp 1.4s ease-out;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-button a {
+        width: 164;
+        height: 19;
+        font-family: Bricolage Grotesque;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+
+    }
+
+    .hero-button:hover {
+        background-color: #0056b3;
+        /* Darker shade on hover */
+    }
+
+    .hero-button img {
+        width: 30px;
+    }
+</style>

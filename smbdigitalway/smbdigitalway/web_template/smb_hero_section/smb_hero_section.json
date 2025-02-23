@@ -1,0 +1,52 @@
+{
+ "__unsaved": 1,
+ "creation": "2025-02-21 23:16:15.254928",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [
+  {
+   "__unsaved": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "btn_text",
+   "fieldtype": "Data",
+   "label": "Button Text",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "btn_url",
+   "fieldtype": "Data",
+   "label": "Button URL",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "bgm_img",
+   "fieldtype": "Attach Image",
+   "label": "BGM Image",
+   "reqd": 0
+  }
+ ],
+ "idx": 0,
+ "modified": "2025-02-21 23:59:16.892353",
+ "modified_by": "Administrator",
+ "module": "Smbdigitalway",
+ "name": "SMB Hero section",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Section"
+}
