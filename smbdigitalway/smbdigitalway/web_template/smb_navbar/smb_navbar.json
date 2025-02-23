@@ -1,0 +1,17 @@
+{
+ "__islocal": true,
+ "__unsaved": 1,
+ "creation": "2025-02-21 21:57:12.421023",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [],
+ "idx": 0,
+ "modified": "2025-02-21 21:57:12.421023",
+ "modified_by": "Administrator",
+ "module": "Smbdigitalway",
+ "name": "SMB Navbar",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Navbar"
+}

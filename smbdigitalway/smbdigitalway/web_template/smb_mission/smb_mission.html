@@ -1,0 +1,85 @@
+<section class="mission-section">
+    <div class="mission-content">
+        <div class="mission-text">
+            <h2>{{ title | default("OUR MISSION") }}</h2>
+            <p>{{ description | default("We help these businesses in selecting the right set of technologies keeping in mindtheir strategic growth plans and resources.") }}</p>
+        </div>
+    </div>
+</section>
+
+<style>
+       .mission-section {
+        background-color: #F2F4F9;
+        width: 1920;
+        height: 628;
+
+    }
+
+    .mission-content {
+        background: url('/assets/smbdigitalway/images/Frame.png') no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+        padding-top: 160px;
+        padding-right: 40px;
+        padding-bottom: 160px;
+        padding-left: 40px;
+
+    }
+
+    .mission-text h2 {
+        width: 1107;
+        height: 52;
+        font-family: Be Vietnam;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -1%;
+        text-align: center;
+        color: #14487F;
+
+    }
+
+    .mission-text p {
+        width: 1200;
+        height: 216;
+        font-family: Be Vietnam;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 72px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #14487F;
+
+    }
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .mission-text h2 {
+            font-size: 32px;
+        }
+        .mission-text p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .mission-content {
+            padding: 60px 15px;
+        }
+        .mission-text h2 {
+            font-size: 28px;
+        }
+        .mission-text p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .mission-text h2 {
+            font-size: 24px;
+        }
+        .mission-text p {
+            font-size: 14px;
+        }
+    }
+</style>

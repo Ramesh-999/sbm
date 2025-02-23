@@ -1,0 +1,122 @@
+<nav
+	class="navbar navbar-primary navbar-expand-lg navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100">
+	<div class="container">
+		<div class="logo">
+			<a class="navbar-brand d-flex justify-content-center align-items-center"
+				href="{{ url_prefix }}{{ home_page or " /" }}">
+				{%- if brand_html -%}
+				{{ brand_html }}
+				{%- elif banner_image -%}
+				<img src='{{ banner_image }}'>
+				{%- else -%}
+				<span>{{ (frappe.get_hooks("brand_html") or [_("Home")])[0] }}</span>
+				{%- endif -%}
+				<div class="smb-logo-text">
+					<h2>SBM</h2>
+					<p>Digital Way</p>
+				</div>
+			</a>
+			<p class="smb-logo-description"><strong>AUTOMATION</strong> SIMPLIFIED</p>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span>
+				<svg class="icon icon-lg">
+					<use href="#icon-menu"></use>
+				</svg>
+			</span>
+		</button>
+
+		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+			{% include "templates/includes/navbar/navbar_items.html" %}
+		</div>
+
+		<a href="#" class="btn btn-outline-light rounded-pill px-4">CONTACT US <img
+				src="/assets/smbdigitalway/images/blue_vecrot.png" alt="Icon"></a>
+
+	</div>
+
+</nav>
+
+<style>
+	.navbar {
+		top: 0;
+		left: 0;
+		z-index: 1050;
+		font-weight: bold;
+		margin-top: 10px;
+	}
+
+	.navbar-light {
+		border-bottom: 0px;
+	}
+
+	.navbar-nav .nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		margin: 0 15px;
+	}
+
+	.navbar-brand {
+		padding-bottom: 0px;
+	}
+
+	.navbar-brand img {
+		max-height: 40px;
+	}
+
+	.btn-outline-light {
+		color: #17a2b8;
+		border-color: #fff;
+		background: white;
+		font-weight: bold;
+	}
+
+	.btn-outline-light img {
+		height: 16px;
+		margin-left: 8px;
+	}
+
+	.navbar-brand.me-auto {
+		display: flex;
+		align-items: center;
+	}
+
+	.smb-logo-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 10px;
+		/* Adjust spacing as needed */
+	}
+
+	.smb-logo-description {
+		color: #ffffff;
+	}
+
+	.smb-logo-text h2 {
+		font-size: 1.2em;
+		/* Adjust font size as needed */
+		margin: 0;
+		font-weight: bold;
+		/* Or other font weight */
+		color: #ffffff;
+	}
+
+	.smb-logo-text p {
+		font-size: 0.5em;
+		/* Adjust font size as needed */
+		margin: 0;
+		color: #ffffff;
+		/* Or other color */
+	}
+
+	/* Optional: Style the image if you are using one */
+	.navbar-brand.me-auto img {
+		max-height: 50px;
+	}
+
+	.navbar-collapse {
+		flex-grow: 0;
+	}
+</style>

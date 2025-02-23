@@ -1,0 +1,178 @@
+<section class="hero-section" style="background-image: url('{{ bg_image | default("/assets/smbdigitalway/images/smb_backgroud.jpeg") }}');">
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content text-white">
+            <h1 class="hero-title">{{ title | default("Transform Your Business.") }}</h1>
+            <p class="hero-text">
+                {{ description | default("Unlock growth with affordable, streamlined, and integrated digital solutions. SMB Digital Way helps small and medium businesses leverage the right technologies to simplify processes, boost efficiency, and scale effectively. Say goodbye to disconnected tools and hello to a unified digital future.") }}
+            </p>
+            
+            {% if btn_text %}
+                <div class='hero-button'>
+                    <a href="{{ btn_url | default('#') }}"> {{ btn_text }} </a>
+                    <img src="/assets/smbdigitalway/images/Vector.png" alt="Icon">
+                </div>
+            {% else %}
+                <div class='hero-button'>
+                    <a href="{{ btn_url | default('#') }}"> LEARN HOW WE HELP </a>
+                    <img src="/assets/smbdigitalway/images/Vector.png" alt="Icon">
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .hero-section {
+        position: relative;
+        background: url('/assets/smbdigitalway/images/smb_backgroud.jpeg') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 150px;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        /* Slightly darker overlay */
+        z-index: 1;
+        /* Ensure overlay is above background image */
+    }
+
+    .hero-content {
+        position: relative;
+        max-width: 800px;
+        /* Wider content area */
+        padding: 20px;
+        margin: 0 auto;
+        /* Center content horizontally */
+        z-index: 2;
+    }
+
+    .hero-title {
+        width: 469;
+        height: 52;
+        gap: 4px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        animation: fadeInUp 1s ease-out;
+        /* Fade-in animation */
+    }
+
+    .hero-text {
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0px;
+        color: #ffffff;
+
+        animation: fadeInUp 1.2s ease-out;
+        /* Fade-in animation */
+    }
+
+    .hero-button {
+        max-width: 265px;
+        height: 56;
+        gap: 10px;
+        padding-top: 16px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        border-radius: 8px;
+        border-width: 1px;
+        background: #3EC1CE;
+        border: 1px solid #3EC1CE;
+        transition: background-color 0.3s ease;
+        /* Smooth hover transition */
+        animation: fadeInUp 1.4s ease-out;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-button a {
+        width: 164;
+        height: 19;
+        font-family: Bricolage Grotesque;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+
+    }
+
+    .hero-button:hover {
+        background-color: #0056b3;
+        /* Darker shade on hover */
+    }
+
+    .hero-button img {
+        width: 30px;
+    }
+
+    .section-padding-top {
+        padding-top: 0rem;
+    }
+
+    .page-content-wrapper .container {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+
+
+    /* Tablets */
+    @media (max-width: 1024px) {
+        .hero-section {
+            padding: 8vh 5%;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.2em;
+        }
+
+        .hero-text {
+            font-size: 1.1em;
+        }
+
+        .hero-button {
+            padding: 14px 22px;
+            font-size: 1em;
+        }
+    }
+
+    /* Mobile Screens */
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 5vh 5%;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 1.8em;
+        }
+
+        .hero-text {
+            font-size: 1em;
+        }
+
+        .hero-button {
+            flex-direction: column;
+            padding: 12px 18px;
+            font-size: 0.9em;
+        }
+
+        .hero-button img {
+            width: 20px;
+        }
+    }
+</style>
